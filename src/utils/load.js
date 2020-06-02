@@ -1,7 +1,7 @@
 import { csv } from "d3-fetch";
 import dayjs from 'dayjs';
 import DEATHS from "~/data/data.csv";
-import movingAvg from "./calcAvg";
+import movingAvg from "./movingAvg";
 
 export const loadData = () => {
   /* Fetch and parse files.*/
@@ -9,44 +9,44 @@ export const loadData = () => {
     csv(DEATHS),
   ]).then(([deaths]) => {
     const data = {}
-    // PA
-    let cleanPa = deaths.map((item) => {
-      const {date, pa} = item
+    // Reported deaths
+    let cleanReported = deaths.map((item) => {
+      const {date, reported} = item
       const cleanDate = dayjs(date, 'YYYY-MM-DD')
-      const newDeaths = +pa >= 0 ? +pa : 0
+      const newDeaths = +reported >= 0 ? +reported : 0
       return {
         date: cleanDate,
         newDeaths
       }
     })
     // add moving avg
-    const paAvg = movingAvg(cleanPa, 7, 'newDeaths')
-    cleanPa = cleanPa.map((item, idx) => {
+    const reportedAvg = movingAvg(cleanReported, 7, 'newDeaths')
+    cleanReported = cleanReported.map((item, idx) => {
       return {
         ...item,
-        avg: paAvg[idx]
+        avg: reportedAvg[idx]
       }
     })
-    // NJ
-    let cleanNj = deaths.map((item) => {
-      const {date, nj} = item
+    // Occurred deaths
+    let cleanOccurred = deaths.map((item) => {
+      const {date, occurred} = item
       const cleanDate = dayjs(date, 'YYYY-MM-DD')
-      const newDeaths = +nj >= 0 ? +nj : 0
+      const newDeaths = +occurred >= 0 ? +occurred : 0
       return {
         date: cleanDate,
         newDeaths
       }
     })
     // add moving avg
-    const njAvg = movingAvg(cleanNj, 7, 'newDeaths')
-    cleanNj = cleanNj.map((item, idx) => {
+    const occurredAvg = movingAvg(cleanOccurred, 7, 'newDeaths')
+    cleanOccurred = cleanOccurred.map((item, idx) => {
       return {
         ...item,
-        avg: njAvg[idx]
+        avg: occurredAvg[idx]
       }
     })
-    data['pa'] = cleanPa
-    data['nj'] = cleanNj
+    data['reported'] = cleanReported
+    data['occurred'] = cleanOccurred
     return data
   })
 };

@@ -37,7 +37,8 @@ const ChartDaily = ({
       <YAxis 
       width={40}
       tick={{ fontSize: 12 }}
-       />
+      domain={[0, 600]}
+      />
       <Tooltip
         content={({ active, payload, label }) => (
           <ChartTooltip

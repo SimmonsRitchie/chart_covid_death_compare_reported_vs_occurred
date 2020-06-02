@@ -29,7 +29,7 @@ class Main extends React.Component {
           <Body data={this.props.data} /> 
           <Footer 
           byline="Daniel Simmons-Ritchie"
-          source="Pennsylvania data collated by Spotlight PA/Philadelphia Inquirer. New Jersey data collated by the New York Times."
+          source="Pennsylvania data collated by Spotlight PA/Philadelphia Inquirer."
           outlet="Spotlight PA"
           outletUrl="https://www.spotlightpa.org/"
           />

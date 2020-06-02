@@ -1,0 +1,11 @@
+.tooltip-numbers {
+  // font-weight: bold;
+
+  &.abbrev-numbers {
+    font-weight: normal;
+    text-transform: uppercase;
+    span {
+      font-weight: bold;
+    }
+  }
+}

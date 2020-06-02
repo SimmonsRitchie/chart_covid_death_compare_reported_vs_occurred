@@ -1,5 +1,5 @@
 ### COVID-19 Deaths Compare, Reported vs Occurred
-Side-by-side charts of daily coronavirus deaths in Pennsylvania comparing the number of deaths reported publicly each day by the Department of Health versus the day deaths actually occurred.
+Side-by-side charts of daily coronavirus deaths in Pennsylvania between March 17 to June 2, 2020, comparing the number of deaths reported publicly each day by the Department of Health versus the day deaths actually occurred.
 
 View: [live demo](https://interactives.data.spotlightpa.org/2020/covid-deaths-compare-reported-vs-occurred/).
 

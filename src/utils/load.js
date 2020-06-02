@@ -1,6 +1,6 @@
 import { csv } from "d3-fetch";
 import dayjs from 'dayjs';
-import DEATHS from "~/data/deaths__pa-nj__new-daily.csv";
+import DEATHS from "~/data/data.csv";
 import movingAvg from "./calcAvg";
 
 export const loadData = () => {

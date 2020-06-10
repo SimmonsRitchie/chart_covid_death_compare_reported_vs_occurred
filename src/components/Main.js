@@ -28,10 +28,10 @@ class Main extends React.Component {
           <Header />
           <Body data={this.props.data} /> 
           <Footer 
-          byline="Daniel Simmons-Ritchie"
-          source="Pennsylvania data collated by Spotlight PA/Philadelphia Inquirer."
-          outlet="Spotlight PA"
-          outletUrl="https://www.spotlightpa.org/"
+            byline="Daniel Simmons-Ritchie"
+            source="Pennsylvania data collated by Spotlight PA/Philadelphia Inquirer."
+            outlet="Spotlight PA"
+            outletUrl="https://www.spotlightpa.org/"
           />
         </div>
       </div>

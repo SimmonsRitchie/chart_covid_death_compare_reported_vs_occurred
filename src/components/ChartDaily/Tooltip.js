@@ -16,13 +16,13 @@ const Tooltip = ({
           {' '}
           {chartType}
           {': '}
-          <strong>{formatComma(payload[0].value)}</strong>
+          <span className="chart-daily-tooltip__value">{formatComma(payload[0].value)}</span>
         </div>
         {payload[1] && (
           <div className="chart-daily-tooltip__numbers">
             7-day average:
             {' '}
-            <strong>{formatComma(payload[1].value)}</strong>
+            <span className="chart-daily-tooltip__value">{formatComma(payload[1].value)}</span>
           </div>
         )}
       </TooltipWrapper>

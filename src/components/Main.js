@@ -29,7 +29,7 @@ class Main extends React.Component {
           <Body data={this.props.data} /> 
           <Footer 
             byline="Daniel Simmons-Ritchie"
-            source="Pennsylvania Department of Health"
+            source="Reported data is based on Pa. Department of Health data compiled daily by Spotlight PA/the Philadelphia Inquirer since March. Occurred data is based on Pa. Department of Health statistics collated on June 16."
             outlet="Spotlight PA"
             outletUrl="https://www.spotlightpa.org/"
           />
